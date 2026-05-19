@@ -1,0 +1,38 @@
+package proebom.sorteio.models;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "obm")
+public class OBM {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  private String codigo;
+  private String nome;
+  private String sigla;
+  private String telefone;
+
+  @ManyToOne
+  @JoinColumn(name = "crbm_id")
+  private CRBM crbm;
+  
+  @Embedded
+  private Endereco endereco;
+}
