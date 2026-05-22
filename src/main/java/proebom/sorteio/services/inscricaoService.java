@@ -2,7 +2,6 @@ package proebom.sorteio.services;
 
 import org.springframework.stereotype.Service;
 
-import jakarta.transaction.Transactional;
 
 @Service
 public class inscricaoService {
