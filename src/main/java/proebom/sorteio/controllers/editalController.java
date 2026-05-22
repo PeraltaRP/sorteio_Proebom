@@ -25,4 +25,5 @@ public class editalController {
   public void exibirSorteio() {}
 
   @GetMapping("/resultado")
+  public void exibirResultado() {}
 } 
