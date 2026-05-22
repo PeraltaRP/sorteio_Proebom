@@ -1,17 +1,3 @@
--- 1. cria candidato
-INSERT INTO candidato (nome) VALUES ('Pedro');
-
--- 2. cria responsável
-INSERT INTO responsavel (nome) VALUES ('Ana');
-
--- 3. cria vínculo
-INSERT INTO candidato_responsavel (id_candidato, id_responsavel, qualificacao)
-VALUES (1, 1, 'pai');
-
-
-insert into usuarios (nome, matricula, senha, ativo) values ('peralta', '123', '123', true);
-
-
 insert into crbm( codigo ) values ('1º CRBM');
 insert into crbm( codigo ) values ('2º CRBM');
 insert into crbm( codigo ) values ('3º CRBM');
