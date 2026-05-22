@@ -44,8 +44,7 @@ public class Responsavel {
   private BigDecimal rendaFamiliar;
   private String numeroNis;
 
-  @Enumerated(EnumType.STRING)
-  private QualificacaoResponsavel qualificacao;
+
 
   @OneToMany(mappedBy = "responsavel")
   private List<CandidatoResponsavel> candidatos = new ArrayList<>();

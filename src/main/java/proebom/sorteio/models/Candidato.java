@@ -33,13 +33,10 @@ public class Candidato {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   
-  @Column(name = "id_candidato")
   private Long id;
   
-  @Column(name = "nome", nullable = false)
   private String nome;
   
-  @Column(name = "cpf", nullable = false, unique = true)  
   private String cpf;
 
   private Boolean filhoMilitar;
