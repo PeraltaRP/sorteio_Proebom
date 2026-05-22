@@ -10,7 +10,7 @@ import proebom.sorteio.repository.ObmRepository;
 
 
 @Service
-public class ObmService {
+public class obmService {
 
      @Autowired
     private ObmRepository repository;
@@ -18,6 +18,15 @@ public class ObmService {
     public List<OBM> listarTodas(){
 
         return repository.findAll();
+    }
+
+    public List<OBM> listarObms() {
+      List<OBM> obmsList = repository.findAll();
+
+      if(obmsList.isEmpty()){
+        throw new RuntimeException("Nenhuma OBM encontrada.");
+      }
+      return obmsList;
     }
   
 }

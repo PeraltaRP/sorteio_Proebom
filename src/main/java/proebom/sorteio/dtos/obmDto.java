@@ -14,8 +14,8 @@ import proebom.sorteio.models.OBM;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ObmController {
-   private Long id;
+public class obmDto {
+  private Long id;
   private String codigo;
   private String nome;
   private String sigla;
@@ -23,7 +23,7 @@ public class ObmController {
   private CRBM crbm;
   private Endereco endereco;
 
-  public ObmController(OBM entity) {
+  public obmDto(OBM entity) {
     this.id = entity.getId();
     this.codigo = entity.getCodigo();
     this.nome = entity.getNome();
