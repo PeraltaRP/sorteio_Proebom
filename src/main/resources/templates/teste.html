@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#020617;
+    color:white;
+    overflow:hidden;
+}
+
+header{
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+    color:#94a3b8;
+}
+
+.container{
+    display:flex;
+    gap:25px;
+    padding:20px;
+    height:75vh;
+}
+
+.card{
+    flex:1;
+    border-radius:30px;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,255,255,0.08);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.05);
+    border-radius:40%;
+    top:-120px;
+    right:-100px;
+    animation:liquido 10s linear infinite;
+}
+
+@keyframes liquido{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.aprovado{
+    background:linear-gradient(
+        180deg,
+        rgba(34,197,94,0.5),
+        rgba(21,128,61,0.8)
+    );
+}
+
+.classificado{
+    background:linear-gradient(
+        180deg,
+</html>

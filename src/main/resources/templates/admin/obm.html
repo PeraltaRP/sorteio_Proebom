@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>OBMs</title>
+</head>
+
+<body>
+
+<h1>Lista de OBMs</h1>
+
+<ul>
+
+    <li th:each="obm : ${obms}">
+
+        <span th:text="${obm.nome}"></span>
+
+    </li>
+
+</ul>
+
+</body>
+</html>

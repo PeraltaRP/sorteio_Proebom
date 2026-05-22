@@ -31,6 +31,7 @@ public class Edital {
   private LocalDateTime dataCriacao;
   private LocalDateTime dataNascimentoInicial;
   private LocalDateTime dataNascimentoFinal;
+  private int numeroVagasFilhoMilitar;
 
   @Enumerated(EnumType.STRING)
   private StatusEdital status;
