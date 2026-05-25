@@ -23,7 +23,7 @@ public class LocalTreinamento {
 
   @ManyToOne
   @JoinColumn(name = "id_obm")
-  private OBM obm;
+  private Obm obm;
 
   @Embedded
   private Endereco endereco;

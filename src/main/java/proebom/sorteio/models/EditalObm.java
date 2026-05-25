@@ -28,7 +28,7 @@ public class EditalObm {
 
     @ManyToOne
     @JoinColumn(name = "id_obm")
-    private OBM obm;
+    private Obm obm;
   
 
   

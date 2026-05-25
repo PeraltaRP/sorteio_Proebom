@@ -7,27 +7,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import proebom.sorteio.models.CRBM;
 import proebom.sorteio.models.Endereco;
-import proebom.sorteio.models.OBM;
+import proebom.sorteio.models.Obm;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class obmDto {
+public class ObmDto {
   private Long id;
   private String codigo;
-  private String nome;
-  private String sigla;
   private String telefone;
   private CRBM crbm;
   private Endereco endereco;
 
-  public obmDto(OBM entity) {
+  public ObmDto(Obm entity) {
     this.id = entity.getId();
     this.codigo = entity.getCodigo();
-    this.nome = entity.getNome();
-    this.sigla = entity.getSigla();
     this.telefone = entity.getTelefone();
     this.crbm = entity.getCrbm();
     this.endereco = entity.getEndereco();
