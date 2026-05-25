@@ -11,7 +11,7 @@ import proebom.sorteio.repository.ObmRepository;
 
 
 @Service
-
+public class ObmService {
      @Autowired
     private ObmRepository repository;
 
