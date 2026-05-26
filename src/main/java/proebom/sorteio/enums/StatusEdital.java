@@ -4,5 +4,5 @@ public enum StatusEdital {
   ABERTO,
   ENCERRADO,
   SUSPENSO,
-  RASCULHO
+  RASCUNHO
 }

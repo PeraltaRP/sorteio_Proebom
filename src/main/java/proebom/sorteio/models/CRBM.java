@@ -16,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "crbm")
-public class CRBM {
+public class Crbm {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;

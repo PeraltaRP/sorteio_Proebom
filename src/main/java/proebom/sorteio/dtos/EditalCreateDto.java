@@ -1,5 +1,7 @@
 package proebom.sorteio.dtos;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
@@ -13,26 +15,26 @@ import proebom.sorteio.models.Edital;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class editalDto {
-  
+public class EditalCreateDto {
+
   private Long id;
   private String titulo;
   private String descricao;
-  private LocalDateTime dataInicioInscricao;
-  private LocalDateTime dataFimInscricao;
-  private LocalDateTime dataCriacao;
-  private LocalDateTime dataNascimentoInicial;
-  private LocalDateTime dataNascimentoFinal;
+  private LocalDateTime dataAbertura;
+  private LocalDateTime dataFechamento;
+  private Timestamp dataCriacao;
+  private LocalDate dataNascimentoInicial;
+  private LocalDate dataNascimentoFinal;
   private int numeroVagasFilhoMilitar;
   private StatusEdital status;
   private long idUsuarioCriacao;
 
-  public editalDto(Edital entity) {
+  public EditalCreateDto(Edital entity) {
     this.id = entity.getId();
     this.titulo = entity.getTitulo();
     this.descricao = entity.getDescricao();
-    this.dataInicioInscricao = entity.getDataInicioInscricao();
-    this.dataFimInscricao = entity.getDataFimInscricao();
+    this.dataAbertura = entity.getDataAbertura();
+    this.dataFechamento = entity.getDataFechamento();
     this.dataCriacao = entity.getDataCriacao();
     this.dataNascimentoInicial = entity.getDataNascimentoInicial();
     this.dataNascimentoFinal = entity.getDataNascimentoFinal();

@@ -29,7 +29,7 @@ public class Obm {
 
   @ManyToOne
   @JoinColumn(name = "crbm_id")
-  private CRBM crbm;
+  private Crbm crbm;
   
   @Embedded
   private Endereco endereco;

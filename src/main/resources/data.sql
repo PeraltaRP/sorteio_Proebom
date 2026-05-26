@@ -1,3 +1,6 @@
+ insert into usuario (nome, matricula, senha, ativo) values ('João Silva', '123456', 'senha123', true);
+
+
 insert into crbm( codigo ) values ('1º CRBM');
 insert into crbm( codigo ) values ('2º CRBM');
 insert into crbm( codigo ) values ('3º CRBM');

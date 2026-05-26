@@ -1,5 +1,7 @@
 package proebom.sorteio.models;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -26,16 +28,16 @@ public class Edital {
 
   private String titulo;
   private String descricao;
-  private LocalDateTime dataInicioInscricao;
-  private LocalDateTime dataFimInscricao;
-  private LocalDateTime dataCriacao;
-  private LocalDateTime dataNascimentoInicial;
-  private LocalDateTime dataNascimentoFinal;
+  private LocalDateTime dataAbertura;
+  private LocalDateTime dataFechamento;
+  private Timestamp dataCriacao;
+  private LocalDate dataNascimentoInicial;
+  private LocalDate dataNascimentoFinal;
   private int numeroVagasFilhoMilitar;
 
   @Enumerated(EnumType.STRING)
   private StatusEdital status;
-  
+
   @ManyToOne
   @JoinColumn(name = "id_usuario")
   private Usuario usuarioCriacao;

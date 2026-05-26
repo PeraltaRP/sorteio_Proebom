@@ -6,38 +6,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import proebom.sorteio.dtos.ObmDto;
+import proebom.sorteio.models.Crbm;
 import proebom.sorteio.models.Obm;
+import proebom.sorteio.repository.CrbmRepository;
 import proebom.sorteio.repository.ObmRepository;
 
 
 @Service
 public class ObmService {
-     @Autowired
-    private ObmRepository repository;
+    @Autowired
+    private ObmRepository repositoryObm;
+
+    @Autowired
+    private CrbmRepository repositoryCrbm;
 
     public List<Obm> listarObms() {
-      List<Obm> obmsList = repository.findAll();
-
+      List<Obm> obmsList = repositoryObm.findAll();
       if(obmsList.isEmpty()){
         throw new RuntimeException("Nenhuma OBM encontrada.");
       }
       return obmsList;
     }
 
-
-
-    public ObmDto cadastrarNovaObm(ObmDto dto) {
+    public ObmDto insert(ObmDto dto) {
       Obm entity = new Obm();
+
       entity.setCodigo(dto.getCodigo());
       entity.setTelefone(dto.getTelefone());
-      entity.setCrbm(dto.getCrbm());
+
+      // Verificar se o CRBM existe antes de associar
+      Crbm crbm = repositoryCrbm.findById(dto.getCrbmId())
+          .orElseThrow(() -> new RuntimeException("CRBM com ID " + dto.getCrbmId() + " não encontrado."));
+      entity.setCrbm(crbm);
+      
       entity.setEndereco(dto.getEndereco());
 
-      entity = repository.save(entity);
-
-      return new ObmDto();
+      entity = repositoryObm.save(entity);
+      
+      return new ObmDto(entity);
     }
 
+      
     
   
 }
