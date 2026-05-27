@@ -22,13 +22,14 @@ public class EditalObm {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-@ManyToOne
-    @JoinColumn(name = "id_edital")
-    private Edital edital;
+  
+  @ManyToOne
+  @JoinColumn(name = "id_edital")
+  private Edital edital;
 
-    @ManyToOne
-    @JoinColumn(name = "id_obm")
-    private Obm obm;
+  @ManyToOne
+  @JoinColumn(name = "id_obm")
+  private Obm obm;
   
 
   

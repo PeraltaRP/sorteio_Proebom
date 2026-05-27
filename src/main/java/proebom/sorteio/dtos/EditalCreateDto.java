@@ -38,7 +38,6 @@ public class EditalCreateDto {
     this.dataCriacao = entity.getDataCriacao();
     this.dataNascimentoInicial = entity.getDataNascimentoInicial();
     this.dataNascimentoFinal = entity.getDataNascimentoFinal();
-    this.numeroVagasFilhoMilitar = entity.getNumeroVagasFilhoMilitar();
     this.status = entity.getStatus();
     this.idUsuarioCriacao = entity.getUsuarioCriacao().getId();
   }

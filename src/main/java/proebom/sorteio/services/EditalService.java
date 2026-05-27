@@ -39,7 +39,6 @@ public class EditalService {
     entity.setDataCriacao(dto.getDataCriacao());
     entity.setDataNascimentoInicial(dto.getDataNascimentoInicial());
     entity.setDataNascimentoFinal(dto.getDataNascimentoFinal());
-    entity.setNumeroVagasFilhoMilitar(dto.getNumeroVagasFilhoMilitar());
     entity.setStatus(dto.getStatus());
     // Aqui você pode associar o usuário criador, se necessário
 

@@ -33,7 +33,7 @@ public class Edital {
   private Timestamp dataCriacao;
   private LocalDate dataNascimentoInicial;
   private LocalDate dataNascimentoFinal;
-  private int numeroVagasFilhoMilitar;
+
 
   @Enumerated(EnumType.STRING)
   private StatusEdital status;
