@@ -24,15 +24,14 @@ public class EditalObm {
   private Long id;
   
   @ManyToOne
-  @JoinColumn(name = "id_edital")
+  @JoinColumn(name = "id_edital", nullable = false)
   private Edital edital;
 
   @ManyToOne
-  @JoinColumn(name = "id_obm")
+  @JoinColumn(name = "id_obm", nullable = false)
   private Obm obm;
   
-
-  
+  private Boolean ativo = true;
   
 
   

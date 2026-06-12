@@ -22,8 +22,8 @@ public class LocalTreinamento {
   private Long id;
 
   @ManyToOne
-  @JoinColumn(name = "id_obm")
-  private Obm obm;
+  @JoinColumn(name = "id_edital_obm")
+  private EditalObm editalObm;
 
   @Embedded
   private Endereco endereco;

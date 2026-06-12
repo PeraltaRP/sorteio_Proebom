@@ -26,24 +26,25 @@ import proebom.sorteio.enums.Turno;
 @Entity
 @Table(name = "turma_treinamento")
 public class TurmaTreinamento {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+ @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  @ManyToOne
-  @JoinColumn(name = "id_edital")
-  private Edital edital;
+    private String nome;
 
-  @ManyToOne
-  @JoinColumn(name = "id_local_treinamento")
-  private LocalTreinamento localTreinamento;
+    @ManyToOne
+    @JoinColumn(name = "id_local_treinamento")
+    private LocalTreinamento localTreinamento;
 
-  @Enumerated(EnumType.STRING)
-  private Turno turno;
+    @Enumerated(EnumType.STRING)
+    private Turno turno;
 
-  @OneToMany(cascade = CascadeType.ALL)
-  @JoinColumn(name = "id_turma")
-   private List<TurmaHorario> horarios;
+    @OneToMany(
+        mappedBy = "turma",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true
+    )
+    private List<TurmaHorario> horarios;
 
-  private Integer quantidadeVagas;
+    private Integer vagas;
 }
